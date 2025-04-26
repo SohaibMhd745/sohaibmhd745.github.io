@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-UltraLight.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-Light.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-Regular.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-Medium.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-SemiBold.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-Bold.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NewBlackTypeface';
+    src: url('../fonts/new-black/NewBlackTypeface-ExtraBold.woff2') format('woff2'),
+        url('../fonts/new-black/NewBlackTypeface-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+:root {
+    --primary: #004AAD;
+    --light: #F5F4F2;
+    --dark: #1F1F1F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+main {
+    max-width: 1600px;
+    margin: 150px auto 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1600px;
+    padding: 50px 0 100px 0;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(0deg, rgba(245, 244, 242, 0) 0%, rgba(245, 244, 242, 1) 50%);
+}
+
+nav span {
+    font-weight: 700;
+}
+
+nav a,
+nav p {
+    font-family: 'NewBlackTypeface';
+    font-size: 18px;
+
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+nav p {
+    text-align: right;
+}
