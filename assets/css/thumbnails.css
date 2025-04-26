@@ -1,0 +1,95 @@
+main,
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    gap: 48px;
+}
+
+.videos {
+    gap: 16px;
+}
+
+.video {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.video>div {
+    flex: 1;
+}
+
+.large {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.views {
+    font-family: 'Chumb';
+    font-size: 120px;
+    font-weight: 400;
+    margin-bottom: -30px;
+}
+
+.views span {
+    font-size: 48px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.channel,
+.stats,
+.stats>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.channel img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.stats {
+    font-size: 14px;
+    gap: 24px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

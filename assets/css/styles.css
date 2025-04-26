@@ -1,4 +1,39 @@
 @font-face {
+    font-family: 'MaximaNouva';
+    src: url('../fonts/maxima-nouva/MaximaNouva-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaximaNouva';
+    src: url('../fonts/maxima-nouva/MaximaNouva-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaximaNouva';
+    src: url('../fonts/maxima-nouva/MaximaNouva-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaximaNouva';
+    src: url('../fonts/maxima-nouva/MaximaNouva-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MaximaNouva';
+    src: url('../fonts/maxima-nouva/MaximaNouva-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'NewBlackTypeface';
     src: url('../fonts/new-black/NewBlackTypeface-UltraLight.woff2') format('woff2'),
         url('../fonts/new-black/NewBlackTypeface-UltraLight.woff') format('woff');
@@ -54,8 +89,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Chumb';
+    src: url('../fonts/chumb/Chumb.woff2') format('woff2'),
+        url('../fonts/chumb/Chumb.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 :root {
-    --primary: #004AAD;
     --light: #F5F4F2;
     --dark: #1F1F1F;
 }
@@ -67,26 +109,50 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--light);
+    font-family: 'MaximaNouva';
+    font-weight: 600;
+    letter-spacing: 0.03em;
+
     color: var(--dark);
+    background-color: var(--light);
 }
 
 main {
     max-width: 1600px;
-    margin: 150px auto 0 auto;
+    margin: 120px auto 0 auto;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {}
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: var(--light);
+    background-color: var(--dark);
+    transition: background-color 0.2s ease-in-out;
+
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 16px;
+}
+
+button:hover {
+    background-color: #363636;
+}
+
+button.disabled {
+    background-color: #727272;
+    cursor: not-allowed;
 }
 
 nav {
@@ -95,15 +161,17 @@ nav {
 
     width: 100%;
     max-width: 1600px;
-    padding: 50px 0 100px 0;
+
+    padding: 48px 0;
+    background-color: var(--light);
 
     position: fixed;
     top: 0;
     left: 50%;
+    z-index: 1;
     transform: translateX(-50%);
-
-    background: linear-gradient(0deg, rgba(245, 244, 242, 0) 0%, rgba(245, 244, 242, 1) 50%);
 }
+
 
 nav span {
     font-weight: 800;
@@ -112,16 +180,14 @@ nav span {
 nav a,
 nav p {
     font-family: 'NewBlackTypeface';
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 400;
 
     text-transform: uppercase;
+    letter-spacing: 0.02em;
     line-height: 1.2;
 
     transition: color 0.2s ease-in-out;
-}
-
-nav a:hover {
-    color: var(--primary);
 }
 
 nav p {
