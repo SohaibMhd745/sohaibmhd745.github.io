@@ -8,6 +8,94 @@ main {
     gap: 48px;
 }
 
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    height: 300px;
+    background-color: var(--light-gray);
+    border-radius: 20px;
+}
+
+.client .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    width: 600px;
+    padding: 0 32px;
+
+    text-align: justify;
+}
+
+.client .name {
+    font-family: 'Chumb';
+    font-size: 64px;
+    font-weight: 400;
+}
+
+.client .socials {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-grow: 1;
+}
+
+.client .socials a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    font-family: 'Chumb';
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 0.75;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.client .socials a:hover {
+    transform: translateY(-4px);
+}
+
+.client .socials i {
+    font-size: 48px;
+}
+
+.client .followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.client .followers span {
+    font-family: 'Chumb';
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.client .followers p {
+    font-family: 'NewBlackTypeface';
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.client .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 24px;
+}
+
+.client .image img {
+    max-height: 100%;
+}
+
 .videos {
     gap: 16px;
 }
@@ -27,13 +115,33 @@ main {
     border-radius: 20px;
 }
 
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
 .thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    transition: clip-path 0.5s ease-in-out;
+
     object-fit: cover;
     display: block;
 }
+
+.thumbnail img.hidden {
+    clip-path: inset(0 100% 0 0);
+    pointer-events: none;
+}
+
+.thumbnail img.visible {
+    clip-path: inset(0 0% 0 0);
+}
+
 
 .details {
     display: flex;

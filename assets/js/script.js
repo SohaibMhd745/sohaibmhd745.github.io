@@ -1,18 +1,31 @@
 document.querySelectorAll('.compare').forEach(button => {
     button.addEventListener('click', function () {
-        const button = this;
-        const thumbnail = this.closest('.video').querySelector('.thumbnail img');
-        const originalSrc = thumbnail.src;
+        const thumbnail = this.closest('.video').querySelector('.thumbnail');
+        const rawImage = thumbnail.querySelector('.raw');
 
         button.disabled = true;
         button.classList.add('disabled');
 
-        thumbnail.src = originalSrc.replace('.jpg', '_raw.jpg');
+        rawImage.classList.remove('hidden');
+        rawImage.classList.add('visible');
 
         setTimeout(() => {
-            thumbnail.src = originalSrc;
-            button.disabled = false;
-            button.classList.remove('disabled');
+            rawImage.classList.remove('visible');
+            rawImage.classList.add('hidden');
+
+            setTimeout(() => {
+                button.disabled = false;
+                button.classList.remove('disabled');
+            }, 500);
         }, 2000);
     });
+});
+
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('nav');
+    if (window.scrollY > 0) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });

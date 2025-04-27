@@ -5,47 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miniatures - Ashway</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="stylesheet" href="/assets/css/thumbnails.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
     <nav>
-        <a href="/">
-            Portfolio
-        </a>
-
-        <a href="/thumbnails/">
-            <span>Miniatures</span>
-        </a>
-
-        <a href="/posters/">
-            Posters
-        </a>
-
-        <a href="/flyers/">
-            Affiches
-        </a>
-
-        <p>
-            &copy; 2025 Ashway
-        </p>
+        <div class="nav-links">
+            <a href="/">Portfolio</a>
+            <a href="/thumbnails/" class="active">Miniatures</a>
+            <a href="/posters/">Posters</a>
+            <a href="/flyers/">Affiches</a>
+        </div>
+        <p>&copy; 2025 Ashway</p>
     </nav>
 
     <main>
-        <div class="presentation">
-            <p>Aminematue</p>
+        <div class="client">
+            <div class="infos">
+                <p class="name">Aminematue</p>
+                <p>
+                    Aminematue est un streamer ayant marqué l'histoire de Twitch, en organisant d'importants événements
+                    comme le tournoi « Eleven All Stars », ou encore l'événement caritatif « Stream for Humanity ».
+                    <br><br>
+                    En parallèle, il travaille sur le projet Grandline RP aux côtés de Loly, qui rassemble régulièrement
+                    de nombreux créateurs de contenu. Il est également président d'une équipe de la Kings World Cup.
+                </p>
+            </div>
+
+            <div class="socials">
+                <a href="https://www.youtube.com/@Aminematue" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                    <div class="followers">
+                        <span>1,9M</span>
+                        <p>abonnés</p>
+                    </div>
+                </a>
+
+                <a href="https://www.twitch.tv/aminematue" target="_blank">
+                    <i class="fa-brands fa-twitch"></i>
+                    <div class="followers">
+                        <span>3,3M</span>
+                        <p>abonnés</p>
+                    </div>
+                </a>
+
+                <a href="https://x.com/Aminematue" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <div class="followers">
+                        <span>2,8M</span>
+                        <p>abonnés</p>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/aminematue" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                    <div class="followers">
+                        <span>1,6M</span>
+                        <p>abonnés</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="image">
+                <img src="/assets/images/clients/aminematue.png" alt="Aminematue">
+            </div>
         </div>
 
         <div class="videos">
             <div class="video">
                 <div class="thumbnail large">
-                    <img src="/assets/images/thumbnails/stream_for_humanity.jpg">
+                    <img class="original" src="/assets/images/thumbnails/stream_for_humanity.jpg">
+                    <img class="raw hidden" src="/assets/images/thumbnails/stream_for_humanity_raw.jpg">
                 </div>
 
                 <div class="details">
-                    <p class="views">483k<span> vues</span></p>
+                    <p class="views">484k<span> vues</span></p>
 
                     <div class="description">
                         <p class="title">
@@ -139,7 +175,8 @@
         <div class="videos">
             <div class="video">
                 <div class="thumbnail large">
-                    <img src="/assets/images/thumbnails/bureau_des_sauces_inoxtag.jpg">
+                    <img class="original" src="/assets/images/thumbnails/bureau_des_sauces_inoxtag.jpg">
+                    <img class="raw hidden" src="/assets/images/thumbnails/bureau_des_sauces_inoxtag_raw.jpg">
                 </div>
 
                 <div class="details">
@@ -184,7 +221,8 @@
 
             <div class="video">
                 <div class="thumbnail large">
-                    <img src="/assets/images/thumbnails/bureau_des_sauces_squeezie_gotaga.jpg">
+                    <img class="original" src="/assets/images/thumbnails/bureau_des_sauces_squeezie_gotaga.jpg">
+                    <img class="raw hidden" src="/assets/images/thumbnails/bureau_des_sauces_squeezie_gotaga_raw.jpg">
                 </div>
 
                 <div class="details">

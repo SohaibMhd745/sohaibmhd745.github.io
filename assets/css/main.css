@@ -1,0 +1,124 @@
+@import url('./fonts.css');
+
+:root {
+    --light: #F5F4F2;
+    --dark: #1F1F1F;
+
+    --light-gray: #eeede9;
+    --gray: #727272;
+    --dark-gray: #363636;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MaximaNouva';
+    font-weight: 600;
+    letter-spacing: 0.03em;
+
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+main {
+    max-width: 1600px;
+    margin: 120px auto 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    font-size: 14px;
+    color: var(--light);
+    background-color: var(--dark);
+    transition: background-color 0.2s ease-in-out;
+
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 16px;
+}
+
+button:hover {
+    background-color: var(--dark-gray);
+}
+
+button.disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1600px;
+    background-color: var(--light);
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
+
+nav .active {
+    font-weight: 800;
+}
+
+nav a,
+nav p {
+    font-family: 'NewBlackTypeface';
+    font-size: 16px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+
+    padding: 48px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+nav.scrolled p,
+nav.scrolled a {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+nav a {
+    padding-left: 20px;
+}
+
+nav a:first-of-type {
+    padding-left: 0;
+}
+
+nav a:hover {
+    background-color: var(--light-gray);
+}
+
+.nav-links {
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav-links a {
+    flex: 1;
+}
