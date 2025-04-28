@@ -1,6 +1,6 @@
 document.querySelectorAll('.compare').forEach(button => {
     button.addEventListener('click', function () {
-        const thumbnail = this.closest('.video').querySelector('.thumbnail');
+        const thumbnail = this.closest('.video-large').querySelector('.thumbnail');
         const rawImage = thumbnail.querySelector('.raw');
 
         button.disabled = true;

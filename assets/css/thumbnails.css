@@ -1,21 +1,82 @@
 main,
-.videos {
+.works {
     display: flex;
     flex-direction: column;
 }
 
 main {
-    gap: 48px;
+    gap: 32px;
+}
+
+hr {
+    height: 1px;
+    margin: 48px 0;
+    border: none;
+
+    opacity: 0.5;
+    background-color: var(--dark);
+}
+
+.works {
+    gap: 16px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.grid-6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
 }
 
 .client {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 48px;
+    position: relative;
     height: 300px;
     background-color: var(--light-gray);
     border-radius: 20px;
+}
+
+#aminematue {
+    color: #EBFAFF;
+    background: #115166;
+    background: linear-gradient(0deg, rgba(17, 81, 102, 1) 0%, rgba(13, 59, 74, 1) 100%);
+}
+
+#avamind {
+    color: #FBEBFF;
+    background: #821A99;
+    background: linear-gradient(0deg, rgba(130, 26, 153, 1) 0%, rgba(107, 22, 126, 1) 100%);
+}
+
+#wao {
+    color: #EFD6BE;
+    background: #9E2020;
+    background: linear-gradient(0deg, rgba(158, 32, 32, 1) 0%, rgba(133, 27, 27, 1) 100%);
 }
 
 .client .infos {
@@ -23,8 +84,9 @@ main {
     flex-direction: column;
     gap: 16px;
 
-    width: 600px;
-    padding: 0 32px;
+    min-width: 600px;
+    max-width: 600px;
+    padding-left: 32px;
 
     text-align: justify;
 }
@@ -88,6 +150,10 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
     height: 100%;
     padding-top: 24px;
 }
@@ -96,32 +162,25 @@ main {
     max-height: 100%;
 }
 
-.videos {
-    gap: 16px;
-}
-
-.video {
+.video-large {
     display: flex;
     justify-content: space-between;
     gap: 24px;
 }
 
-.video>div {
+.video-large>div {
     flex: 1;
 }
 
-.large {
+.video-large .thumbnail {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 20px;
 }
 
-.thumbnail {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 16 / 9;
-}
-
-.thumbnail img {
+.video-large .thumbnail img {
     position: absolute;
     top: 0;
     left: 0;
@@ -133,17 +192,16 @@ main {
     display: block;
 }
 
-.thumbnail img.hidden {
-    clip-path: inset(0 100% 0 0);
+.video-large .thumbnail img.hidden {
+    clip-path: inset(0 0 0 100%);
     pointer-events: none;
 }
 
-.thumbnail img.visible {
-    clip-path: inset(0 0% 0 0);
+.video-large .thumbnail img.visible {
+    clip-path: inset(0 0 0 0%);
 }
 
-
-.details {
+.video-large .details {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,52 +210,102 @@ main {
     text-align: center;
 }
 
-.views {
+.video-large .views {
     font-family: 'Chumb';
     font-size: 120px;
     font-weight: 400;
     margin-bottom: -30px;
 }
 
-.views span {
+.video-large .views span {
     font-size: 48px;
 }
 
-.description {
+.video-large .description {
     display: flex;
     flex-direction: column;
     gap: 8px;
     max-width: 600px;
 }
 
-.title {
+.video-large .title {
     font-size: 20px;
     font-weight: 600;
 }
 
-.channel,
-.stats,
-.stats>div {
+.video-large .channel,
+.video-large .stats,
+.video-large .stats>div {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 }
 
-.channel img {
+.video-large .channel img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.stats {
+.video-large .stats {
     font-size: 14px;
     gap: 24px;
 }
 
-.buttons {
+.video-large .buttons {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.video-small {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.video-small .thumbnail {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.video-small .details {
+    display: flex;
+    gap: 12px;
+}
+
+.video-small .details img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.video-small .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-grow: 1;
+}
+
+.video-small .title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+}
+
+.video-small .channel {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.video-small .channel span {
+    font-size: 8px;
 }
