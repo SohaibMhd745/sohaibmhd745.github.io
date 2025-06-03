@@ -53,10 +53,12 @@ hr {
 
 .client {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 24px;
+
+    padding: 20px;
     position: relative;
-    height: 300px;
     background-color: var(--light-gray);
     border-radius: 20px;
 }
@@ -79,28 +81,34 @@ hr {
     background: linear-gradient(0deg, rgba(158, 32, 32, 1) 0%, rgba(133, 27, 27, 1) 100%);
 }
 
+#zack-nani {
+    color: #EAF4ED;
+    background: #1A6D5A;
+    background: linear-gradient(0deg, rgb(23, 94, 77) 0%, rgba(14, 70, 60, 1) 100%);
+}
+
 .client .infos {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-
-    min-width: 600px;
-    max-width: 600px;
-    padding-left: 32px;
-
+    gap: 8px;
     text-align: justify;
+}
+
+.client .infos p {
+    font-size: 14px;
 }
 
 .client .name {
     font-family: 'Chumb';
-    font-size: 64px;
+    font-size: 48px !important;
     font-weight: 400;
 }
 
 .client .socials {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 48px;
+    justify-content: space-between;
     flex-grow: 1;
 }
 
@@ -111,7 +119,6 @@ hr {
     gap: 16px;
 
     font-family: 'Chumb';
-    font-size: 32px;
     font-weight: 400;
     text-align: center;
     line-height: 0.75;
@@ -124,7 +131,7 @@ hr {
 }
 
 .client .socials i {
-    font-size: 48px;
+    font-size: 36px;
 }
 
 .client .followers {
@@ -137,7 +144,7 @@ hr {
 .client .followers span {
     font-family: 'Chumb';
     font-weight: 400;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .client .followers p {
@@ -147,15 +154,7 @@ hr {
 }
 
 .client .image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    padding-top: 24px;
+    display: none;
 }
 
 .client .image img {
@@ -308,4 +307,56 @@ hr {
 
 .video-small .channel span {
     font-size: 8px;
+}
+
+
+
+@media screen and (min-width: 1600px) {
+    .client {
+        flex-direction: row;
+        height: 300px;
+        padding: 0;
+        gap: 48px;
+    }
+
+    .client .infos {
+        gap: 16px;
+        min-width: 600px;
+        max-width: 600px;
+        padding-left: 32px;
+    }
+
+    .client .infos p {
+        font-size: inherit;
+    }
+
+    .client .name {
+        font-size: 64px !important;
+    }
+
+    .client .socials {
+        width: inherit;
+        justify-content: inherit;
+        gap: 48px;
+    }
+
+    .client .socials i {
+        font-size: 48px;
+    }
+
+    .client .followers span {
+        font-size: 32px;
+    }
+
+    .client .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        padding-top: 24px;
+    }
 }
