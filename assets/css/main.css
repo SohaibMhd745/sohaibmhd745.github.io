@@ -41,30 +41,31 @@ a {
     color: inherit;
 }
 
-button {
+button,
+.button-link {
     all: unset;
-    cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-
     font-size: 14px;
     color: var(--light);
     background-color: var(--dark);
-    transition: background-color 0.2s ease-in-out;
-
     border: none;
     border-radius: 9999px;
     padding: 10px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    flex: 1;
 }
 
-button:hover {
+button:hover,
+.button-link:hover {
     background-color: var(--dark-gray);
 }
 
-button.disabled {
+button.disabled,
+.button-link.disabled {
     background-color: var(--gray);
     cursor: not-allowed;
 }
@@ -123,6 +124,10 @@ nav a:hover {
 @media screen and (min-width: 1600px) {
     .hide-on-mobile {
         display: inherit;
+    }
+
+    .only-on-mobile {
+        display: none;
     }
 
     main {

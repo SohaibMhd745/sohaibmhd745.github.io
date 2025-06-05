@@ -1,11 +1,7 @@
-main,
-.works {
+main {
     display: flex;
     flex-direction: column;
-}
-
-main {
-    gap: 32px;
+    gap: 16px;
 }
 
 hr {
@@ -15,10 +11,6 @@ hr {
 
     opacity: 0.5;
     background-color: var(--dark);
-}
-
-.works {
-    gap: 16px;
 }
 
 .grid-2 {
@@ -94,12 +86,22 @@ hr {
     text-align: justify;
 }
 
-.client .infos p {
-    font-size: 14px;
+.client .infos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.client .infos br {
-    display: none;
+.client .infos-header img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client .infos p {
+    font-size: 14px;
 }
 
 .client .name {
@@ -120,7 +122,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
 
     font-family: 'Chumb';
     font-weight: 400;
@@ -165,10 +167,17 @@ hr {
     max-height: 100%;
 }
 
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .video-large {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+    gap: 16px;
 }
 
 .video-large>div {
@@ -209,11 +218,11 @@ hr {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 32px;
-    text-align: center;
+    gap: 16px;
 }
 
 .video-large .views {
+    display: none;
     font-family: 'Chumb';
     font-size: 120px;
     font-weight: 400;
@@ -232,13 +241,10 @@ hr {
 }
 
 .video-large .title {
-    font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.video-large .channel,
-.video-large .stats,
-.video-large .stats>div {
+.video-large .channel {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,11 +259,11 @@ hr {
 }
 
 .video-large .stats {
-    font-size: 14px;
-    gap: 24px;
+    display: none;
 }
 
 .video-large .buttons {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -314,6 +320,10 @@ hr {
 }
 
 @media screen and (min-width: 1600px) {
+    main {
+        gap: 32px;
+    }
+
     .client {
         flex-direction: row;
         height: 300px;
@@ -332,10 +342,6 @@ hr {
         font-size: inherit;
     }
 
-    .client .infos br {
-        display: block;
-    }
-
     .client .name {
         font-size: 64px !important;
     }
@@ -344,6 +350,10 @@ hr {
         width: inherit;
         justify-content: inherit;
         gap: 48px;
+    }
+
+    .client .socials a {
+        gap: 16px;
     }
 
     .client .socials i {
@@ -364,5 +374,40 @@ hr {
         bottom: 0;
         height: 100%;
         padding-top: 24px;
+    }
+
+    .video-large {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .video-large .views {
+        display: block;
+    }
+
+    .video-large .details {
+        text-align: center;
+        gap: 32px;
+    }
+
+    .video-large .title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .video-large .stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        gap: 24px;
+    }
+
+    .video-large .stats>div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        gap: 8px;
     }
 }
