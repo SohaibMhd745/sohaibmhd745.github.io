@@ -55,7 +55,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
 
     padding: 20px;
     position: relative;
@@ -98,9 +98,13 @@ hr {
     font-size: 14px;
 }
 
+.client .infos br {
+    display: none;
+}
+
 .client .name {
     font-family: 'Chumb';
-    font-size: 48px !important;
+    font-size: 28px !important;
     font-weight: 400;
 }
 
@@ -144,13 +148,13 @@ hr {
 .client .followers span {
     font-family: 'Chumb';
     font-weight: 400;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .client .followers p {
     font-family: 'NewBlackTypeface';
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .client .image {
@@ -309,8 +313,6 @@ hr {
     font-size: 8px;
 }
 
-
-
 @media screen and (min-width: 1600px) {
     .client {
         flex-direction: row;
@@ -328,6 +330,10 @@ hr {
 
     .client .infos p {
         font-size: inherit;
+    }
+
+    .client .infos br {
+        display: block;
     }
 
     .client .name {
