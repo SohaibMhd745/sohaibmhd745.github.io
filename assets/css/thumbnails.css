@@ -4,42 +4,11 @@ main {
     gap: 16px;
 }
 
-hr {
-    height: 1px;
-    margin: 48px 0;
-    border: none;
-
-    opacity: 0.5;
-    background-color: var(--dark);
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-
+.grid-1,
+.grid-2,
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.grid-4 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-}
-
-.grid-5 {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-}
-
-.grid-6 {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 16px;
 }
 
@@ -222,15 +191,9 @@ hr {
 }
 
 .video-large .views {
-    display: none;
     font-family: 'Chumb';
-    font-size: 120px;
+    font-size: 42px;
     font-weight: 400;
-    margin-bottom: -30px;
-}
-
-.video-large .views span {
-    font-size: 48px;
 }
 
 .video-large .description {
@@ -266,7 +229,37 @@ hr {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
+}
+
+.video-large button,
+.video-large .button-link {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--light);
+    background-color: var(--dark);
+    border: none;
+    border-radius: 9999px;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    flex: 1;
+}
+
+.video-large button:hover,
+.video-large .button-link:hover {
+    background-color: var(--dark-gray);
+}
+
+.video-large button.disabled,
+.video-large .button-link.disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
 }
 
 .video-small {
@@ -322,6 +315,24 @@ hr {
 @media screen and (min-width: 1600px) {
     main {
         gap: 32px;
+    }
+
+    .grid-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
     }
 
     .client {
@@ -382,7 +393,12 @@ hr {
     }
 
     .video-large .views {
-        display: block;
+        font-size: 120px;
+        margin-bottom: -30px;
+    }
+
+    .video-large .views span {
+        font-size: 48px;
     }
 
     .video-large .details {
@@ -409,5 +425,10 @@ hr {
         justify-content: center;
         font-size: 14px;
         gap: 8px;
+    }
+
+    .video-large button,
+    .video-large .button-link {
+        flex: 0 1 auto;
     }
 }
